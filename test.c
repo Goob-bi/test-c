@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <stdlib.h>
+#include <include/libhttp.h>
 
 char* readexact(size_t len) {
     char *buff = malloc(len + 1);
@@ -15,6 +15,7 @@ char* readexact(size_t len) {
 
 void main(int argc, char **argv, char **envp) {
     char* test;
+    int fd;
     printf("hello dees:\n");
     test = readexact(5);
     printf("%s: wow", test);
